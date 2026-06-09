@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nityachinmaya Chinera | Software Test Engineer</title>
+<meta name="description" content="Software Test Engineer with 3+ years in Manual, Automation & API Testing. Healthcare, Fintech, BaaS, ERP/CRM domains." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0e1a;
+    --bg2: #111827;
+    --bg3: #1a2235;
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.14);
+    --text: #f0f4ff;
+    --text2: #8fa0bc;
+    --text3: #5a6e8a;
+    --accent: #3b82f6;
+    --accent2: #10b981;
+    --accent3: #8b5cf6;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'Inter', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.6;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10,14,26,0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--text2); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--text2);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta {
+    background: var(--accent);
+    color: #fff !important;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+  }
+  .nav-cta:hover { background: #2563eb; color: #fff !important; }
+
+  /* SECTIONS */
+  section { padding: 6rem 0; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+
+  /* HERO */
+  #hero {
+    padding: 140px 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent2);
+    letter-spacing: 0.08em;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px; height: 1px;
+    background: var(--accent2);
+  }
+  h1.hero-name {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.6rem;
+    color: var(--text);
+  }
+  .hero-title {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+  }
+  .hero-tagline {
+    font-size: 1rem;
+    color: var(--text2);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .hero-tags {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 2.2rem;
+  }
+  .tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border2);
+    color: var(--text2);
+    background: var(--bg3);
+    letter-spacing: 0.03em;
+  }
+  .tag.accent { border-color: rgba(59,130,246,0.4); color: #93c5fd; background: rgba(59,130,246,0.1); }
+  .tag.green { border-color: rgba(16,185,129,0.4); color: #6ee7b7; background: rgba(16,185,129,0.08); }
+  .tag.purple { border-color: rgba(139,92,246,0.4); color: #c4b5fd; background: rgba(139,92,246,0.08); }
+
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  .btn-primary:hover { background: #2563eb; transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border2);
+  }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); background: rgba(59,130,246,0.06); }
+
+  .hero-avatar {
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e3a5f, #1a2235);
+    border: 2px solid var(--border2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: var(--mono);
+    flex-shrink: 0;
+    position: relative;
+  }
+  .hero-avatar::after {
+    content: '';
+    position: absolute; inset: -6px;
+    border-radius: 50%;
+    border: 1px dashed rgba(59,130,246,0.3);
+  }
+
+  /* STATS */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 5rem;
+  }
+  .stat-item {
+    background: var(--bg2);
+    padding: 1.4rem 1.2rem;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    font-family: var(--mono);
+  }
+  .stat-label {
+    font-size: 11px;
+    color: var(--text3);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* SECTION HEADERS */
+  .section-header { margin-bottom: 3rem; }
+  .section-eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent2);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+  }
+
+  /* SKILLS */
+  #skills { background: var(--bg2); }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; }
+  .skill-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.2rem;
+    transition: border-color 0.2s;
+  }
+  .skill-card:hover { border-color: var(--border2); }
+  .skill-card-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text3);
+    margin-bottom: 0.8rem;
+    font-family: var(--mono);
+  }
+  .skill-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .skill-pill {
+    font-size: 12px;
+    padding: 3px 9px;
+    border-radius: 4px;
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    color: var(--text2);
+    font-family: var(--mono);
+  }
+
+  /* EXPERIENCE */
+  .exp-list { display: flex; flex-direction: column; gap: 1.6rem; }
+  .exp-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.6rem 1.8rem;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+  .exp-card:hover { border-color: var(--border2); }
+  .exp-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 3px; height: 100%;
+    border-radius: 12px 0 0 12px;
+  }
+  .exp-card.blue::before { background: var(--accent); }
+  .exp-card.green::before { background: var(--accent2); }
+  .exp-card.purple::before { background: var(--accent3); }
+
+  .exp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+  .exp-role { font-size: 1rem; font-weight: 600; color: var(--text); }
+  .exp-company { font-size: 0.85rem; color: var(--accent); font-weight: 500; margin-bottom: 0.8rem; }
+  .exp-period {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    padding: 3px 9px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .exp-points { list-style: none; }
+  .exp-points li {
+    font-size: 13.5px;
+    color: var(--text2);
+    padding: 4px 0 4px 18px;
+    position: relative;
+    line-height: 1.6;
+  }
+  .exp-points li::before {
+    content: '→';
+    position: absolute; left: 0;
+    color: var(--text3);
+    font-size: 12px;
+    top: 5px;
+  }
+  .exp-award {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 10px;
+    background: rgba(234,179,8,0.1);
+    border: 1px solid rgba(234,179,8,0.25);
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-size: 12px;
+    color: #fbbf24;
+    font-weight: 500;
+  }
+
+  /* PROJECTS */
+  #projects { background: var(--bg2); }
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
+  .proj-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.4rem;
+    display: flex; flex-direction: column;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .proj-card:hover { border-color: var(--border2); transform: translateY(-2px); }
+  .proj-icon {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+  .proj-icon.blue { background: rgba(59,130,246,0.15); }
+  .proj-icon.green { background: rgba(16,185,129,0.12); }
+  .proj-icon.purple { background: rgba(139,92,246,0.12); }
+  .proj-icon.orange { background: rgba(249,115,22,0.12); }
+  .proj-icon.red { background: rgba(239,68,68,0.1); }
+
+  .proj-name { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+  .proj-domain { font-size: 11px; color: var(--text3); font-family: var(--mono); margin-bottom: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .proj-desc { font-size: 13px; color: var(--text2); line-height: 1.6; flex: 1; margin-bottom: 1rem; }
+  .proj-stack { display: flex; flex-wrap: wrap; gap: 5px; }
+  .proj-stack span {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    color: var(--text3);
+  }
+
+  /* CERTS */
+  .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; }
+  .cert-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.2rem;
+    display: flex; align-items: center; gap: 12px;
+    transition: border-color 0.2s;
+  }
+  .cert-card:hover { border-color: var(--border2); }
+  .cert-icon { font-size: 1.6rem; flex-shrink: 0; }
+  .cert-name { font-size: 13px; font-weight: 500; color: var(--text); line-height: 1.4; }
+  .cert-by { font-size: 11px; color: var(--text3); font-family: var(--mono); margin-top: 3px; }
+
+  /* CONTACT */
+  #contact { background: var(--bg2); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+  .contact-intro { font-size: 1rem; color: var(--text2); line-height: 1.8; }
+  .contact-links { display: flex; flex-direction: column; gap: 12px; }
+  .contact-link {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .contact-link:hover { border-color: var(--accent); color: var(--accent); }
+  .contact-link-icon { font-size: 1.2rem; width: 20px; text-align: center; }
+  .contact-link-label { font-size: 11px; color: var(--text3); font-family: var(--mono); margin-bottom: 1px; }
+  .contact-link-val { font-size: 13px; color: var(--text2); }
+  .contact-link:hover .contact-link-val { color: var(--accent); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text3);
+  }
+
+  /* MOBILE */
+  @media (max-width: 700px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-avatar { width: 100px; height: 100px; font-size: 2.5rem; order: -1; }
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .exp-header { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">NC<span>.qa</span></a>
+  <ul class="nav-links">
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="Resume-_Nityachinmaya_Chinera.pdf" target="_blank" class="nav-cta">Resume ↗</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow">Available · Immediate Joiner · Bhubaneswar, India</div>
+        <h1 class="hero-name">Nityachinmaya<br>Chinera</h1>
+        <div class="hero-title">Software Test Engineer</div>
+        <p class="hero-tagline">
+          3+ years delivering zero-defect UAT sign-offs across Healthcare, Fintech, BaaS, and ERP/CRM domains.
+          Automation-first mindset. Manual precision. FDA V&amp;V certified practices.
+        </p>
+        <div class="hero-tags">
+          <span class="tag accent">Selenium · Playwright</span>
+          <span class="tag green">FDA V&amp;V · ISO 13485</span>
+          <span class="tag purple">REST API · Postman</span>
+          <span class="tag">JIRA · Agile/Scrum</span>
+          <span class="tag">SQL · Jenkins CI/CD</span>
+          <span class="tag accent">700+ Test Cases Authored</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Hire Me</a>
+          <a href="https://github.com/chineranitya" target="_blank" class="btn btn-outline">GitHub ↗</a>
+          <a href="Resume-_Nityachinmaya_Chinera.pdf" target="_blank" class="btn btn-outline">Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-avatar">NC</div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-item">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">700+</div>
+        <div class="stat-label">Test Cases</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">150+</div>
+        <div class="stat-label">Defects Logged</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Critical UAT Defects</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">// expertise</div>
+      <div class="section-title">Technical Skills</div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-label">Automation</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Selenium WebDriver</span>
+          <span class="skill-pill">Playwright</span>
+          <span class="skill-pill">Testim.io</span>
+          <span class="skill-pill">TestNG</span>
+          <span class="skill-pill">JUnit</span>
+          <span class="skill-pill">POM</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">API Testing</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Postman</span>
+          <span class="skill-pill">Rest Assured</span>
+          <span class="skill-pill">REST</span>
+          <span class="skill-pill">GraphQL</span>
+          <span class="skill-pill">OAuth2/JWT</span>
+          <span class="skill-pill">Schema Validation</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">Languages</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">TypeScript</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">C# (basic)</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">DevOps / Tools</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Jenkins</span>
+          <span class="skill-pill">GitHub Actions</span>
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">Docker</span>
+          <span class="skill-pill">JIRA</span>
+          <span class="skill-pill">Confluence</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">Medical / Regulatory</div>
+        <div class="skill-pills">
+          <span class="skill-pill">FDA V&amp;V</span>
+          <span class="skill-pill">ISO 13485</span>
+          <span class="skill-pill">IEC 62304</span>
+          <span class="skill-pill">21 CFR Part 11</span>
+          <span class="skill-pill">RTM</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">Domains</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Fintech / BaaS</span>
+          <span class="skill-pill">Medical Device</span>
+          <span class="skill-pill">ERP / CRM</span>
+          <span class="skill-pill">Internet Banking</span>
+          <span class="skill-pill">B2B eCommerce</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">// career</div>
+      <div class="section-title">Work Experience</div>
+    </div>
+    <div class="exp-list">
+
+      <div class="exp-card blue">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Software Test Engineer</div>
+            <div class="exp-company">Dietary Business Intelligence Pvt. Ltd. · Bhubaneswar</div>
+          </div>
+          <div class="exp-period">Jul 2024 – Apr 2026</div>
+        </div>
+        <ul class="exp-points">
+          <li>Designed and executed 200–250 test cases across 8+ modules (Sales, Sourcing, Finance, HRMS) for DBI360 CRM/ERP; achieved 97%+ defect detection rate across functional, regression, and UAT cycles.</li>
+          <li>Built and maintained a Playwright-based hybrid automation framework (TypeScript) and Testim.io regression scripts, reducing release validation time by ~30%.</li>
+          <li>Developed 40+ Postman API test scripts (REST) validating ERP/CRM integrations; identified 15–18 integration defects with SQL-based backend validation.</li>
+          <li>Executed RBAC and SSO integration testing; authored RTMs and documented access-control defect evidence — zero critical issues at enterprise go-live.</li>
+          <li>Logged and tracked 60+ defects end-to-end in JIRA; collaborated in Agile ceremonies (stand-ups, sprint planning, retrospectives).</li>
+        </ul>
+        <div>
+          <span class="exp-award">🏆 Best Employee – Enterprise Security · Feb 2025</span>
+          <span class="exp-award" style="margin-left:8px">🏆 Best Employee – Digital Transformation · Nov 2025</span>
+        </div>
+      </div>
+
+      <div class="exp-card green">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Associate Test Engineer</div>
+            <div class="exp-company">CloudScaleQA · Hyderabad</div>
+          </div>
+          <div class="exp-period">Jul 2023 – May 2024</div>
+        </div>
+        <ul class="exp-points">
+          <li>Executed E2E functional and regression testing for an Internet Banking application (fund transfers, bill payments, beneficiary management); 150–200 test cases with zero critical defects at UAT sign-off.</li>
+          <li>Led mobile banking QA across Android and iOS — validated OTP flows, secure login, and transaction accuracy; logged and resolved 50–60 defects in JIRA.</li>
+          <li>Executed V&amp;V for FDA-regulated medical device software (BP Monitor, SpO2 Monitor) per ISO 13485, IEC 62304, and 21 CFR Part 11; zero high-severity open defects at sign-off.</li>
+          <li>Coordinated UAT with business stakeholders; led formal release sign-off for two consecutive quarterly releases.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card purple">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Product Intern</div>
+            <div class="exp-company">iServeU Technology Pvt. Ltd. · Bhubaneswar (NPCI-Certified BaaS)</div>
+          </div>
+          <div class="exp-period">Feb 2022 – Jul 2022</div>
+        </div>
+        <ul class="exp-points">
+          <li>Tested payment transaction flows (UPI, IMPS, NEFT) on iServeU's cloud-native BaaS switching and agency banking modules against NPCI specifications.</li>
+          <li>Validated KYC onboarding workflows and agent banking screens; reported 10+ functional defects tracked through full lifecycle in JIRA.</li>
+          <li>Tested REST API endpoints for core payment services using Postman, verifying payloads, response codes, and edge cases.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">// portfolio</div>
+      <div class="section-title">Key Projects</div>
+    </div>
+    <div class="projects-grid">
+
+      <div class="proj-card">
+        <div class="proj-icon blue">🔐</div>
+        <div class="proj-name">DBI360 CRM/ERP – SSO &amp; RBAC Testing</div>
+        <div class="proj-domain">ERP / CRM · 2024–2026</div>
+        <div class="proj-desc">Owned full STLC for 8+ ERP/CRM modules. Designed test strategy, authored RTMs, and executed 200+ test cases for RBAC, user-permission, and SSO workflows. Playwright suite integrated with Jenkins CI/CD.</div>
+        <div class="proj-stack">
+          <span>Playwright</span><span>TypeScript</span><span>Postman</span><span>SQL</span><span>JIRA</span><span>Jenkins</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon purple">👥</div>
+        <div class="proj-name">ConfluxHR – HRMS Platform</div>
+        <div class="proj-domain">HRMS / CRM · 2024</div>
+        <div class="proj-desc">Tested payroll, leave, attendance, and employee management modules. Automated REST API validation with Rest Assured. Built Java-based Selenium regression scripts (POM). 98% defect resolution rate pre-UAT.</div>
+        <div class="proj-stack">
+          <span>Selenium</span><span>Java</span><span>Rest Assured</span><span>Postman</span><span>JIRA</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon green">🤖</div>
+        <div class="proj-name">Green Jeeva – AI Chatbot Testing</div>
+        <div class="proj-domain">B2B eCommerce · NLP · 2024–2025</div>
+        <div class="proj-desc">Designed 80+ test cases for NLP intent recognition, entity extraction, fallback handling, and multi-turn flows. Validated NLP API responses via Postman; identified 12+ API-layer defects pre-release.</div>
+        <div class="proj-stack">
+          <span>Postman</span><span>Selenium</span><span>JIRA</span><span>API Testing</span><span>SQL</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon orange">🛒</div>
+        <div class="proj-name">Green Jeeva – B2B eCommerce</div>
+        <div class="proj-domain">B2B eCommerce · 2024–2025</div>
+        <div class="proj-desc">Executed 150–200 test cases across onboarding, product catalogue, and bulk-pricing modules. Built regression coverage for order-management workflows, maintaining platform stability across releases.</div>
+        <div class="proj-stack">
+          <span>Manual Testing</span><span>Regression</span><span>API</span><span>Payment Gateway</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon red">🏥</div>
+        <div class="proj-name">Medical Device V&amp;V – BP &amp; SpO2</div>
+        <div class="proj-domain">Healthcare · FDA · 2023–2024</div>
+        <div class="proj-desc">Executed V&amp;V test cases for FDA-regulated medical devices per ISO 13485, IEC 62304, and 21 CFR Part 11. Validated sensor accuracy, alarm thresholds, Bluetooth transmission, and display logic. Zero open high-severity defects at V&amp;V sign-off.</div>
+        <div class="proj-stack">
+          <span>FDA V&amp;V</span><span>ISO 13485</span><span>IEC 62304</span><span>21 CFR Part 11</span><span>RTM</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION & CERTS -->
+<section id="certs">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">// credentials</div>
+      <div class="section-title">Education &amp; Certifications</div>
+    </div>
+    <div class="exp-list" style="margin-bottom: 2.5rem;">
+      <div class="exp-card blue" style="padding: 1.2rem 1.6rem;">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">B.Tech – Computer Science</div>
+            <div class="exp-company">GITA Autonomous College, Bhubaneswar</div>
+          </div>
+          <div class="exp-period">2019 – 2022 · GPA 3.3/4.0</div>
+        </div>
+      </div>
+      <div class="exp-card purple" style="padding: 1.2rem 1.6rem;">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Diploma – Computer Science</div>
+            <div class="exp-company">C V Raman Global University, Bhubaneswar</div>
+          </div>
+          <div class="exp-period">2015 – 2018 · GPA 3.2/4.0</div>
+        </div>
+      </div>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <div class="cert-name">Professional Certification in Software Testing</div>
+          <div class="cert-by">QSpiders · 2023</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🏆</div>
+        <div>
+          <div class="cert-name">Best Employee – Enterprise Security</div>
+          <div class="cert-by">Dietary Business Intelligence · Feb 2025</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🏆</div>
+        <div>
+          <div class="cert-name">Best Employee – Digital Transformation</div>
+          <div class="cert-by">Dietary Business Intelligence · Nov 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">// let's connect</div>
+      <div class="section-title">Get In Touch</div>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-intro">
+          I'm actively seeking Software Test Engineer roles in Healthcare, Fintech, or product companies — available to join immediately.<br><br>
+          Whether you're a recruiter, hiring manager, or just want to connect — reach out and let's talk.
+        </p>
+        <br>
+        <a href="Resume-_Nityachinmaya_Chinera.pdf" target="_blank" class="btn btn-primary" style="margin-top: 1rem;">Download Resume ↓</a>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:chineranitya@gmail.com" class="contact-link">
+          <div class="contact-link-icon">✉️</div>
+          <div>
+            <div class="contact-link-label">Email</div>
+            <div class="contact-link-val">chineranitya@gmail.com</div>
+          </div>
+        </a>
+        <a href="tel:+918249741941" class="contact-link">
+          <div class="contact-link-icon">📞</div>
+          <div>
+            <div class="contact-link-label">Phone</div>
+            <div class="contact-link-val">+91-8249741941</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/nityachinmaya" target="_blank" class="contact-link">
+          <div class="contact-link-icon">💼</div>
+          <div>
+            <div class="contact-link-label">LinkedIn</div>
+            <div class="contact-link-val">linkedin.com/in/nityachinmaya</div>
+          </div>
+        </a>
+        <a href="https://github.com/chineranitya" target="_blank" class="contact-link">
+          <div class="contact-link-icon">🐙</div>
+          <div>
+            <div class="contact-link-label">GitHub</div>
+            <div class="contact-link-val">github.com/chineranitya</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Built by Nityachinmaya Chinera · chineranitya.github.io · Available for immediate joining</p>
+</footer>
+
+</body>
+</html>
